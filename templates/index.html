@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<main id="home">
+    <video id="background-video" autoplay loop muted>
+        <source src="../static/video/homevideo.mp4" type="video/mp4">
+        <source src="../static/video/homevideo.ogg" type="video/ogg">
+    </video>
+    <div class="hometitle">
+        <h1>{{ hometitle }}</h1>
+        <h3>{{ homesstitle }}</h3>
+    </div>
+</main>
+{% endblock %}

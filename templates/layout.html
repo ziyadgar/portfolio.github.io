@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} - Ziyad Gargouri</title>
+    <link rel="shortcut icon" href="../static/img/logo32x32.ico" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/content/style_menu.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/content/style_home.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/content/style_a_propos.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/content/style_competences.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/static/content/style_projets.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!----------------Script Discord---------------->
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer></script>
+    <!----------------Fin/Script Discord---------------->
+
+</head>
+
+<body>
+    <p class="commentaire">Techno: Flask, Python, Jinja, HTML & CSS</p>
+    <!----------------Header---------------->
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
+    <label for="menu-icon"></label>
+    <nav class="nav">
+        <ul class="pt-5">
+            <li><a href="/">Home</a></li>
+            <li><a href="/a_propos">A propos</a></li>
+            <li><a href="/competences">Compétences</a></li>
+            <li><a href="/projets">Projets</a></li>
+        </ul>
+    </nav>
+    <div class="headerico">
+        {% for key, value in reseau.items() %}
+        <a href="{{ key }}">
+            <img src="../static/img/{{ value }}" alt="logo réseaux sociaux" />
+        </a>
+        {% endfor %}
+    </div>
+    <!----------------Fin/Header---------------->
+    {% block content %}{% endblock %}
+    <!----------------Footer---------------->
+    <footer>
+        <p>&copy; {{ footer }}</p>
+    </footer>
+    <!----------------Fin/Footer---------------->
+    <script>
+        new Crate({
+            server: '909894205084684298', // Serveur de ziyadG
+            channel: '914589032728645712' // #portfolio
+        })
+    </script>
+</body>
+</html>

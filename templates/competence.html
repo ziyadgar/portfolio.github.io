@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section id="skills">
+    <div class="skillstitle">
+        <h1>{{ skillstitle }}</h1>
+    </div>
+    <div class="skillscontainer">
+        <div class="skillslevel">
+            <h3>{{ skillsleveltitle }}</h3>
+            {% for key, value in my_dict_skills.items() %}
+            <div class="skillsbar">
+                <p>{{ key }}: {{ value }}%</p>
+                <progress id="skillsbar" value="{{ value }}" max="100"></progress>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="skillslevel">
+            <h3>{{ skillsswtitle }}</h3>
+            {% for key, value in my_dict_sw.items() %}
+            <div class="skillsbar">
+                <p>{{ key }}: {{ value }}%</p>
+                <progress id="skillsbar" value="{{ value }}" max="100"></progress>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

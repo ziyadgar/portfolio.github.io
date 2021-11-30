@@ -1,0 +1,108 @@
+/* -------------------- Media Query écran 2560px ---------------------- */
+@media screen and (min-width: 751px) and (max-width: 2560px) {
+    /*------------------------MAIN--------------------------*/
+    #about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+        #about h1 {
+            font-family: 'Orbitron','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+    
+    .aboutimg img {
+        max-width: 300px;
+        border-radius: 100%;
+        margin: 20px;
+        
+    }
+
+    .aboutpar {
+        display: flex;
+    }
+
+    .aboutpar p {
+        max-width: 500px;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* -------------------- Media Query écran 750px ---------------------- */
+@media screen and (min-width: 501px) and (max-width: 750px) {
+    /*------------------------MAIN--------------------------*/
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+        #about h1 {
+            font-family: 'Orbitron','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+
+    .aboutimg img {
+        max-width: 150px;
+        border-radius: 100%;
+        margin: 20px;
+    }
+
+    .aboutpar {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        overflow: scroll;
+    }
+
+        .aboutpar p {
+            max-width: 500px;
+            padding: 5px;
+            font-size: 13px;
+        }
+}
+
+/* -------------------- Media Query écran 500px ---------------------- */
+@media screen and (max-width: 500px) {
+    /*------------------------MAIN--------------------------*/
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+        #about h1 {
+            font-family: 'Orbitron','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin-top: 85px;
+        }
+
+
+    .aboutimg img {
+        max-width: 50px;
+        border-radius: 100%;
+        margin-bottom: 5px;
+    }
+
+    .aboutpar {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 400px;
+        overflow: scroll;
+    }
+
+        .aboutpar p {
+            padding: 5px;
+            font-size: 10px;
+        }
+}

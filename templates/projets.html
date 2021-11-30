@@ -1,0 +1,26 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<section id="projet">
+    <video id="background-video" autoplay loop muted>
+        <source src="../static/video/projets.mp4" type="video/mp4">
+    </video>
+    <h1>Mes Projets</h1>
+    <div class="containerprojet">
+        {% for i in indice %}
+        <figure class="projet">
+            <img src="../static/img/{{ urlsimage[i] }}" alt="logo projet" />
+            <figcaption>
+                <p>Nom du projet: {{ nameprojet[i] }}</p>
+                <p>Langages: {{ langprojet[i] }}</p>
+                <p>Date: {{ dateprojet[i] }}</p>
+                <p>Créateur: {{ creatorprojet[i] }}</p>
+                <p>Origine: {{ origineprojet[i] }}</p>
+                <p>Maquette: {{ maquetteorigine[i] }}</p>
+                <button onclick="window.location.href = '{{ urlsprojet[i] }}';">Voir</button>
+            </figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
